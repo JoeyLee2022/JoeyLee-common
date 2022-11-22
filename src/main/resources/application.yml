@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: common
+  thymeleaf:
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+
+logging:
+  charset: UTF-8
+  level:
+    com: DEBUG
+joeylee:
+  # 打印bean的日志
+  print-all-beans:
+    enable: true
+  # 全局响应结果处理
+  response-handler:
+    enable: true
+  # 表示有@WebLog注解的方法都会打印日志
+  web-log:
+    enable: true
+  # 全局异常处理
+  exception-handler:
+    enable: true
+  # 运行时间统计
+  time-interval:
+    enable: true
+    timeUnit: MILLISECONDS
+  #  线程池配置
+  thread-pool:
+    enable: true
+    corePoolSize: 100
+    maxPoolSize: 500
+    queueCapacity: 1024
+    keepAliveSeconds: 60
+    threadNamePrefix: call-
+    rejectPolicy: CALLER_RUNS

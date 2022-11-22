@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <artifactId>common</artifactId>
+    <build>
+        <finalName>${project.artifactId}</finalName>
+    </build>
+    <dependencies>
+        <!--ribbon 负载均衡-->
+        <dependency>
+            <artifactId>ribbon</artifactId>
+            <groupId>com.netflix.ribbon</groupId>
+            <version>${ribbon.version}</version>
+        </dependency>
+        <dependency>
+            <artifactId>ribbon-core</artifactId>
+            <groupId>com.netflix.ribbon</groupId>
+            <version>${ribbon.version}</version>
+        </dependency>
+        <dependency>
+            <artifactId>ribbon-loadbalancer</artifactId>
+            <groupId>com.netflix.ribbon</groupId>
+            <version>${ribbon.version}</version>
+        </dependency>
+        <dependency>
+            <artifactId>ribbon-archaius</artifactId>
+            <groupId>com.netflix.ribbon</groupId>
+            <version>${ribbon.version}</version>
+        </dependency>
+        <dependency>
+            <artifactId>rxjava</artifactId>
+            <groupId>io.reactivex</groupId>
+            <version>${rxjava.version}</version>
+        </dependency>
+
+        <!-- spring操作jms相关-->
+        <dependency>
+            <artifactId>spring-jms</artifactId>
+            <groupId>org.springframework</groupId>
+            <optional>true</optional>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- IBM MQ原生客户端-->
+        <dependency>
+            <artifactId>com.ibm.mq.allclient</artifactId>
+            <groupId>com.ibm.mq</groupId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- redisson -->
+        <dependency>
+            <artifactId>redisson</artifactId>
+            <groupId>org.redisson</groupId>
+            <optional>true</optional>
+        </dependency>
+
+        <!--Spring中使用aop-->
+        <dependency>
+            <artifactId>spring-boot-starter-aop</artifactId>
+            <groupId>org.springframework.boot</groupId>
+        </dependency>
+
+        <dependency>
+            <artifactId>hutool-all</artifactId>
+            <groupId>cn.hutool</groupId>
+        </dependency>
+
+        <!-- 在项目中使用Lombok可以减少很多重复代码的书写。比如说getter/setter/toString等方法的编写。 -->
+        <dependency>
+            <artifactId>lombok</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <scope>compile</scope>
+            <!--            避免依赖冲突,如果是false遇不设置optional那么就会继承引入,否则不继承依赖-->
+            <!--            <optional>true</optional>-->
+        </dependency>
+
+        <dependency>
+            <artifactId>spring-boot-starter-validation</artifactId>
+            <groupId>org.springframework.boot</groupId>
+        </dependency>
+        <dependency>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.boot</groupId>
+        </dependency>
+        <dependency>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <scope>test</scope>
+        </dependency>
+
+        <!--jackson-java高性能JSON工具-->
+        <!--核心包-->
+        <dependency>
+            <artifactId>jackson-core</artifactId>
+            <groupId>com.fasterxml.jackson.core</groupId>
+        </dependency>
+        <!--数据绑定包-->
+        <dependency>
+            <artifactId>jackson-databind</artifactId>
+            <groupId>com.fasterxml.jackson.core</groupId>
+        </dependency>
+        <!--注解包-->
+        <dependency>
+            <artifactId>jackson-annotations</artifactId>
+            <groupId>com.fasterxml.jackson.core</groupId>
+        </dependency>
+        <!-- 支持java8 localDate等新时间类型的序列化 -->
+        <dependency>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+        </dependency>
+        <!--jackson处理xml-->
+        <dependency>
+            <artifactId>jackson-dataformat-xml</artifactId>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+        </dependency>
+        <!--jackson处理yml-->
+        <dependency>
+            <artifactId>jackson-dataformat-yaml</artifactId>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+        </dependency>
+
+        <!-- java读写Excel，引入poi，解析workbook视图 -->
+        <dependency>
+            <artifactId>poi</artifactId>
+            <groupId>org.apache.poi</groupId>
+        </dependency>
+        <dependency>
+            <artifactId>poi-scratchpad</artifactId>
+            <groupId>org.apache.poi</groupId>
+        </dependency>
+        <dependency>
+            <artifactId>ooxml-schemas</artifactId>
+            <groupId>org.apache.poi</groupId>
+        </dependency>
+        <dependency>
+            <artifactId>poi-ooxml-schemas</artifactId>
+            <groupId>org.apache.poi</groupId>
+        </dependency>
+        <!-- 以下是POI相关使用     注：版本号不可轻易更改 -->
+        <dependency>
+            <artifactId>poi-ooxml</artifactId>
+            <groupId>org.apache.poi</groupId>
+        </dependency>
+
+        <dependency>
+            <artifactId>jaudiotagger</artifactId>
+            <groupId>org</groupId>
+        </dependency>
+
+
+        <!-- google开发工具guava -->
+        <dependency>
+            <artifactId>guava</artifactId>
+            <groupId>com.google.guava</groupId>
+            <version>${guava.version}</version>
+        </dependency>
+
+        <!-- okhttp-->
+        <dependency>
+            <artifactId>okhttp</artifactId>
+            <groupId>com.squareup.okhttp3</groupId>
+            <optional>true</optional>
+            <version>${okhttp.version}</version>
+        </dependency>
+
+        <!--apache httpclient-->
+        <dependency>
+            <artifactId>httpclient</artifactId>
+            <groupId>org.apache.httpcomponents</groupId>
+            <optional>true</optional>
+        </dependency>
+
+        <!--webclient-->
+        <dependency>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <artifactId>reactor-extra</artifactId>
+            <groupId>io.projectreactor.addons</groupId>
+            <optional>true</optional>
+        </dependency>
+
+
+    </dependencies>
+    <description>${artifactId}</description>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>${artifactId}</name>
+
+    <parent>
+        <artifactId>base</artifactId>
+        <groupId>com.joeylee</groupId>
+        <relativePath/>
+        <version>1.0</version>
+    </parent>
+
+</project>
